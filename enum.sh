@@ -30,10 +30,23 @@ echo "cat /proc/cpuinfo"
 cat /proc/cpuinfo || true
 echo "ls /lib/modules"
 ls /lib/modules || true
-echo "ip addr"
+echo "networking"
 ip addr || true
-echo "route -n"
 route -n || true
-echo "nmap -sTVC -p- -T5 127.0.0.1"
-nmap -sTVC -p- -T5 10.254.0.0/24 || true
+/sbin/ifconfig -a
+cat /etc/resolv.conf
+cat /etc/networks
+iptables -L
+hostname
+dnsdomainname
+cat /etc/network/interfaces
+cat /etc/sysconfig/network
+netstat -antup
+netstat -antpx
+netstat -tulpn
+arp -e
+route
+/sbin/route -nee
+echo "nmap -sTVC -p- -T5 10.254.0.0/24"
+nmap -sTVC -p- -T4 10.254.0.22/30 || true
 
