@@ -30,6 +30,10 @@ echo "cat /proc/cpuinfo"
 cat /proc/cpuinfo || true
 echo "ls /lib/modules"
 ls /lib/modules || true
+echo "ip addr"
+ip addr
+echo "route -n"
+route -n
 echo "nmap -sTVC -p- -T5 127.0.0.1"
 nmap -sTVC -p- -T5 127.0.0.1 || true
 
