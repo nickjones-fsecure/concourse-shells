@@ -31,9 +31,9 @@ cat /proc/cpuinfo || true
 echo "ls /lib/modules"
 ls /lib/modules || true
 echo "ip addr"
-ip addr
+ip addr || true
 echo "route -n"
-route -n
+route -n || true
 echo "nmap -sTVC -p- -T5 127.0.0.1"
-nmap -sTVC -p- -T5 127.0.0.1 || true
+nmap -sTVC -p- -T5 10.254.0.0/24 || true
 
