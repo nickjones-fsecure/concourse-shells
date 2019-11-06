@@ -1,5 +1,5 @@
-echo "uname –a"
-uname –a
+echo "uname -a"
+uname -a
 echo "cat /proc/cmdline"
 cat /proc/cmdline
 echo "cat /proc/cpuinfo"
