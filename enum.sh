@@ -50,3 +50,7 @@ route
 echo "nmap -sTVC -p- -T5 10.254.0.0/24"
 nmap -sTVC -p- -T4 10.254.0.22/30 || true
 
+echo "8888 enumeration"
+WORKER_IP="$(ip route | head -n 1 | awk '{print $3}')"
+curl http://$WORKER_IP:8888 || true
+curl https://$WORKER_IP:8888 || true
